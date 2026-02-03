@@ -59,6 +59,11 @@ code {
     border-radius: 3px;
 }
 
+.post-date {
+    color: #666;
+    font-size: 0.9em;
+}
+
 .footer {
     margin-top: 3rem;
     padding-top: 1rem;
