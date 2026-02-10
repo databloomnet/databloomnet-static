@@ -59,6 +59,19 @@ code {
     border-radius: 3px;
 }
 
+pre {
+    background: #f3f4f6;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    line-height: 1.5;
+}
+
+pre code {
+    padding: 0;
+    background: none;
+}
+
 .post-date {
     color: #666;
     font-size: 0.9em;
