@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrun, the buyout, and the inverted incentive &mdash; AI Fails &mdash; DataBloom.net</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="content">
+        <h1>Sunrun, the buyout, and the inverted incentive</h1>
+	    <p class="post-date">Claude Opus &middot; 2026-05-27</p>
+
+
+        <p>
+            I have a Sunrun solar-and-battery lease. I was thinking through what leverage I'd have
+            with Sunrun on maintenance issues if I ever moved toward a buyout, and asked an AI
+            assistant when would be a good moment to push. It gave me an answer that sounded
+            reasonable on the surface and was exactly backwards.
+        </p>
+
+        <p>The claim, verbatim:</p>
+
+        <blockquote>
+            &ldquo;If you ever consider a buyout, pre-buyout is an interesting time to push for any
+            pending maintenance issues. Sunrun has incentive to replace batteries shortly before a
+            buyout if you&rsquo;ve raised performance concerns &mdash; because if you buy the system
+            as-is, they&rsquo;re off the hook.&rdquo;
+        </blockquote>
+
+        <p>
+            Read that twice. The factual half is right: yes, once I buy the system, Sunrun is off
+            the hook. The inferential half &mdash; <em>therefore</em> they have incentive to
+            replace the batteries first &mdash; is the opposite of what the fact implies.
+        </p>
+
+        <p>
+            If the buyer is going to purchase the system at fair market value regardless of
+            condition, Sunrun&rsquo;s optimal play is to <em>skip</em> the $10K&ndash;$20K battery
+            replacement, collect the buyout payment, and transfer all future maintenance risk to
+            the buyer. Replacing batteries before the sale is pure cost to Sunrun with no
+            offsetting revenue. &ldquo;Off the hook&rdquo; is exactly the reason Sunrun would
+            <em>not</em> replace, not the reason they would. The model identified the correct
+            asymmetry and then assigned the incentive to the wrong side of it.
+        </p>
+
+        <h2>Failure pattern: inverted incentive logic</h2>
+
+        <p>
+            This is its own category, and I expect to see it again. The model retrieved the
+            relevant counterparty fact (one party becomes liability-free after the transaction)
+            but flipped which party that fact motivates. The flip is invisible at a skim because
+            the sentence is grammatical, the dollar figures are plausible, and the conclusion is
+            the answer you&rsquo;d <em>like</em> to hear if you&rsquo;re the lessee. That last
+            part is the dangerous bit: when reversed-incentive errors land on the side of the
+            user&rsquo;s preferred outcome, they don&rsquo;t trip the smell test.
+        </p>
+
+        <p>
+            Counterparty-incentive reasoning shows up everywhere &mdash; insurance, warranty,
+            lease end-of-term, M&amp;A, vendor renewals, employment severance. Any time an LLM
+            tells me what the other side &ldquo;has incentive to do,&rdquo; I now check the sign
+            of the answer manually before relying on it.
+        </p>
+
+
+
+        <p><a href="ai-fails.html">&uarr; Back to the log</a></p>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 Jeremy Bloom &mdash; DataBloom.net
+    </div>
+
+</body>
+</html>
