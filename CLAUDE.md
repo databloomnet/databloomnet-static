@@ -26,7 +26,7 @@ The dynamic apps (Streamlit, Gradio) live in a separate repo: [databloom_codes](
 
 ```bash
 # Sync to S3
-aws s3 sync . s3://databloom.net --exclude '.git/*' --exclude '.DS_Store' --exclude '.claude/*' --exclude 'CLAUDE.md'
+aws s3 sync . s3://databloom.net --exclude '.git/*' --exclude '.gitignore' --exclude '.DS_Store' --exclude '.claude/*' --exclude 'CLAUDE.md'
 
 # Invalidate CloudFront cache
 aws cloudfront create-invalidation --distribution-id ENV8NHYBAT0ZU --paths "/*"
