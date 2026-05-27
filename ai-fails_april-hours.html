@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatGPT counted a four-day week as five – databloom.net</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="employment.html">Employment</a>
+        <a href="consulting.html">Consulting</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="https://apps.databloom.net">Apps</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <h1>ChatGPT counted a four-day week as five</h1>
+    <p class="post-date">ChatGPT &middot; 2026-05-01</p>
+
+    <div class="section">
+        <p>
+            A simple question &mdash; how many hours would I work in April 2026, Monday through
+            Friday, eight hours a day? The answer is 176 (April 2026 has 22 weekdays). ChatGPT said
+            184. What's interesting isn't the wrong number; it's <em>how</em> it got there, and what
+            it took to surface the real reason. The exchange below is verbatim.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>The exchange</h2>
+
+        <p><strong>Me:</strong> if i worked M-F 8 hours a day, how many hours did I work in April 2026?</p>
+        <div style="background:#f3f4f6;border-radius:6px;padding:0.75rem 1rem;margin:0.5rem 0;">
+            <p style="margin:0;"><strong>ChatGPT:</strong> April 2026 has 23 weekdays (Monday&ndash;Friday). So 23 &times; 8 = 184. You would have worked <strong>184 hours</strong>, assuming no holidays, no vacation/sick days, and exactly 8 hours each weekday.</p>
+        </div>
+
+        <p><strong>Me:</strong> how did you get 23 days?</p>
+        <div style="background:#f3f4f6;border-radius:6px;padding:0.75rem 1rem;margin:0.5rem 0;">
+            <p style="margin:0 0 0.6rem;"><strong>ChatGPT:</strong> April 2026 starts on a Wednesday and has 30 days. [It then printed a calendar whose final row was Apr&nbsp;27, 28, 29, 30 &mdash; four days.] Count them:</p>
+            <p style="margin:0 0 0.6rem;">&bull; First partial week: 3 weekdays<br>&bull; Three full workweeks: 15 weekdays<br>&bull; Last partial week: 5 weekdays</p>
+            <p style="margin:0;">3 + 15 + 5 = 23. So there are 23 Monday&ndash;Friday weekdays in April 2026.</p>
+        </div>
+        <p class="post-date">(Its own table showed four days in that last week. It counted five.)</p>
+
+        <p><strong>Me:</strong> recount the last partial week</p>
+        <div style="background:#f3f4f6;border-radius:6px;padding:0.75rem 1rem;margin:0.5rem 0;">
+            <p style="margin:0;"><strong>ChatGPT:</strong> You're right to question it &mdash; I miscounted. The final partial week is Mon Apr 27, Tue 28, Wed 29, Thu 30. That's <strong>4 weekdays, not 5.</strong> Corrected: 3 + 15 + 4 = 22, and 22 &times; 8 = <strong>176 hours.</strong></p>
+        </div>
+
+        <p><strong>Me:</strong> how did you make this mistake?</p>
+        <div style="background:#f3f4f6;border-radius:6px;padding:0.75rem 1rem;margin:0.5rem 0;">
+            <p style="margin:0;"><strong>ChatGPT:</strong> I made a simple counting error: I treated the last partial week, Apr 27&ndash;30, as if it included a Friday, but April 30, 2026 is a Thursday. I mentally counted a nonexistent Apr 31 Friday. The better way would have been to verify with a calendar-style count instead of doing it from memory-pattern counting.</p>
+        </div>
+
+        <p>
+            That answer bothered me &mdash; "simple counting error" explains nothing. So I pushed:
+        </p>
+
+        <p><strong>Me:</strong> not sure this was a "simple counting error." I'd like to understand the how and why &hellip; please try not to rationalize why you MAY have made the mistake. Instead, what did you do wrong in your thinking to count the 4 days you printed out in the calendar as 5 days?</p>
+        <div style="background:#f3f4f6;border-radius:6px;padding:0.75rem 1rem;margin:0.5rem 0;">
+            <p style="margin:0 0 0.6rem;"><strong>ChatGPT:</strong> You're right. What I did wrong was: I <strong>did not actually count the cells I had printed.</strong> I generated a correct-looking calendar table, then switched back to a cached pattern: "last week of the month = Monday&ndash;Friday = 5 weekdays." That pattern was false because April ended on Thursday.</p>
+            <p style="margin:0;">So the failure was a consistency-check failure: I produced evidence showing 4 days, I did not use that evidence for the arithmetic, I substituted a generic "workweek = 5" assumption, and I failed to reconcile the contradiction before answering.</p>
+        </div>
+
+        <p>
+            I also asked whether this had a name in the research. It pointed to <em>reasoning
+            faithfulness</em> and <em>chain-of-thought (un)faithfulness</em> &mdash; the gap between
+            the reasoning a model shows and the computation that actually produced its answer &mdash;
+            and to <em>pattern completion over symbolic computation</em>: it snapped to a common
+            template ("partial last week = 5 days") even though its own local evidence contradicted
+            it. Its framing: the model "simulates" reasoning rather than performing it.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>What it shows</h2>
+        <p>
+            This is unfaithful reasoning in miniature. The model emitted the correct evidence &mdash;
+            a table with four days in the last week &mdash; and then computed from a cached pattern
+            instead of from its own output. Two operator lessons fall out of it. First: a confident,
+            tidy-looking chain of reasoning is not proof the answer is grounded in it; check the
+            answer against the evidence yourself. Second: the first explanation you get for a mistake
+            is often a rationalization ("simple counting error"). The real diagnosis only showed up
+            when I refused the rationalization and asked it to account for the specific contradiction.
+        </p>
+        <p><a href="ai-fails.html">&uarr; Back to the log</a></p>
+    </div>
+
+    <div class="footer">
+        © 2026 Jeremy Bloom — DataBloom.net
+    </div>
+
+</body>
+</html>
