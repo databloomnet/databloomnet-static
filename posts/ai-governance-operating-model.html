@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Governance Operating Model &ndash; A Reference Model for a Public Agency &ndash; databloom.net</title>
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../employment.html">Employment</a>
+        <a href="../consulting.html">Consulting</a>
+        <a href="../certifications.html">Certifications</a>
+        <a href="https://apps.databloom.net">Apps</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </nav>
+
+    <h1>AI Governance Operating Model &mdash; A Reference Model for a Public Agency</h1>
+    <p class="post-date">2026-09-02</p>
+
+    <div class="section">
+        <p>
+            This is a summary of a governance operating model I designed and authored for a state
+            agency in 2026 &mdash; a body of work that runs about 150 pages (with some rendering
+            options increasing or reducing this by 15%) across ten linked papers and eleven
+            supporting appendices. The full (modestly redacted) document is available on request.
+            This page summarizes each piece &mdash; what it does, what it decides, and where it
+            fits &mdash; so a reader can see the shape of the work without needing the full text.
+        </p>
+        <p>
+            One structural fact matters throughout: at the time of writing, the office had one
+            full-time employee &mdash; the Chief Data and AI Officer &mdash; governing the
+            department's AI adoption at scale of 23,000 employees. Additional headcount was
+            planned but not yet in place. That gap between one FTE and 23,000 employees shapes
+            almost every design choice below.
+        </p>
+        <p>
+            For the design patterns underlying this work &mdash; the core principles and patterns
+            I developed as I built this &mdash; see
+            <a href="ai-governance-patterns.html">Patterns for Governing Enterprise AI Adoption</a>.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>What this operating model is</h2>
+        <p>
+            The engagement started with an open question: what should a newly-formed executive
+            AI office at a public agency actually do, and how should it operate? The model below
+            is the answer I worked out &mdash; deliberately expansive in scope (govern all AI,
+            not GenAI alone), deliberately restrained in posture (attach the office's
+            characterization to whoever already holds authority, rather than claim new approval
+            power over anyone else's process).
+        </p>
+        <p>
+            There were reasonable questions during the engagement about how large the office
+            should ultimately grow. My position was that defining what the office does &mdash;
+            and doesn't do &mdash; has to come first. Only then can you sensibly estimate the
+            headcount needed to actually do it. This body of work is the answer to the first
+            question; the staffing question waits on it.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Length of each piece</h2>
+        <p>Word counts are rounded; page counts are approximate (~500 words per page, single-spaced).</p>
+        <table style="border-collapse:collapse;margin:1rem 0;">
+            <thead>
+                <tr style="border-bottom:1px solid #d1d5db;">
+                    <th style="text-align:left;padding:0.35rem 0.75rem 0.35rem 0;">Piece</th>
+                    <th style="text-align:right;padding:0.35rem 0.75rem;">Words</th>
+                    <th style="text-align:right;padding:0.35rem 0 0.35rem 0.75rem;">~Pages</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td style="padding:0.2rem 0.75rem 0.2rem 0;">Paper 1 &mdash; Foundations &amp; Operating Model</td><td style="text-align:right;padding:0.2rem 0.75rem;">7,100</td><td style="text-align:right;padding:0.2rem 0 0.2rem 0.75rem;">14</td></tr>
+                <tr><td style="padding:0.2rem 0.75rem 0.2rem 0;">Paper 2 &mdash; Characterization &amp; Risk</td><td style="text-align:right;padding:0.2rem 0.75rem;">6,600</td><td style="text-align:right;padding:0.2rem 0 0.2rem 0.75rem;">13</td></tr>
+                <tr><td style="padding:0.2rem 0.75rem 0.2rem 0;">Paper 3 &mdash; State AI Terrain</td><td style="text-align:right;padding:0.2rem 0.75rem;">9,200</td><td style="text-align:right;padding:0.2rem 0 0.2rem 0.75rem;">18</td></tr>
+                <tr><td style="padding:0.2rem 0.75rem 0.2rem 0;">Paper 4 &mdash; Citizen AI</td><td style="text-align:right;padding:0.2rem 0.75rem;">13,500</td><td style="text-align:right;padding:0.2rem 0 0.2rem 0.75rem;">27</td></tr>
+                <tr><td style="padding:0.2rem 0.75rem 0.2rem 0;">Paper 5 &mdash; Engagements</td><td style="text-align:right;padding:0.2rem 0.75rem;">2,900</td><td style="text-align:right;padding:0.2rem 0 0.2rem 0.75rem;">6</td></tr>
+                <tr><td style="padding:0.2rem 0.75rem 0.2rem 0;">Paper 6 &mdash; In-Estate AI</td><td style="text-align:right;padding:0.2rem 0.75rem;">1,500</td><td style="text-align:right;padding:0.2rem 0 0.2rem 0.75rem;">3</td></tr>
+                <tr><td style="padding:0.2rem 0.75rem 0.2rem 0;">Paper 7 &mdash; Other Venues (stub)</td><td style="text-align:right;padding:0.2rem 0.75rem;">860</td><td style="text-align:right;padding:0.2rem 0 0.2rem 0.75rem;">2</td></tr>
+                <tr><td style="padding:0.2rem 0.75rem 0.2rem 0;">Paper 8 &mdash; Enablement (stub)</td><td style="text-align:right;padding:0.2rem 0.75rem;">380</td><td style="text-align:right;padding:0.2rem 0 0.2rem 0.75rem;">1</td></tr>
+                <tr><td style="padding:0.2rem 0.75rem 0.2rem 0;">Paper 9 &mdash; Metrics (stub)</td><td style="text-align:right;padding:0.2rem 0.75rem;">310</td><td style="text-align:right;padding:0.2rem 0 0.2rem 0.75rem;">1</td></tr>
+                <tr><td style="padding:0.2rem 0.75rem 0.2rem 0;">Paper 10 &mdash; GenAI and Media Editing</td><td style="text-align:right;padding:0.2rem 0.75rem;">2,400</td><td style="text-align:right;padding:0.2rem 0 0.2rem 0.75rem;">5</td></tr>
+                <tr><td style="padding:0.2rem 0.75rem 0.2rem 0;">Appendix A &mdash; Category Clearance Request</td><td style="text-align:right;padding:0.2rem 0.75rem;">700</td><td style="text-align:right;padding:0.2rem 0 0.2rem 0.75rem;">1</td></tr>
+                <tr><td style="padding:0.2rem 0.75rem 0.2rem 0;">Appendix B &mdash; Use Carve-out Request</td><td style="text-align:right;padding:0.2rem 0.75rem;">870</td><td style="text-align:right;padding:0.2rem 0 0.2rem 0.75rem;">2</td></tr>
+                <tr><td style="padding:0.2rem 0.75rem 0.2rem 0;">Appendix C &mdash; AI Intake Template</td><td style="text-align:right;padding:0.2rem 0.75rem;">1,300</td><td style="text-align:right;padding:0.2rem 0 0.2rem 0.75rem;">3</td></tr>
+                <tr><td style="padding:0.2rem 0.75rem 0.2rem 0;">Appendix D &mdash; Intake Worked Example</td><td style="text-align:right;padding:0.2rem 0.75rem;">1,400</td><td style="text-align:right;padding:0.2rem 0 0.2rem 0.75rem;">3</td></tr>
+                <tr><td style="padding:0.2rem 0.75rem 0.2rem 0;">Appendix E &mdash; AI Content Provenance &amp; Disclosure</td><td style="text-align:right;padding:0.2rem 0.75rem;">5,300</td><td style="text-align:right;padding:0.2rem 0 0.2rem 0.75rem;">11</td></tr>
+                <tr><td style="padding:0.2rem 0.75rem 0.2rem 0;">Appendix F &mdash; State Process Reference</td><td style="text-align:right;padding:0.2rem 0.75rem;">6,300</td><td style="text-align:right;padding:0.2rem 0 0.2rem 0.75rem;">13</td></tr>
+                <tr><td style="padding:0.2rem 0.75rem 0.2rem 0;">Appendix G &mdash; Governance Reference Diagram</td><td style="text-align:right;padding:0.2rem 0.75rem;">150</td><td style="text-align:right;padding:0.2rem 0 0.2rem 0.75rem;">1</td></tr>
+                <tr><td style="padding:0.2rem 0.75rem 0.2rem 0;">Appendix H &mdash; Sources &amp; Materials</td><td style="text-align:right;padding:0.2rem 0.75rem;">590</td><td style="text-align:right;padding:0.2rem 0 0.2rem 0.75rem;">1</td></tr>
+                <tr><td style="padding:0.2rem 0.75rem 0.2rem 0;">Appendix I &mdash; How AI Contributed</td><td style="text-align:right;padding:0.2rem 0.75rem;">260</td><td style="text-align:right;padding:0.2rem 0 0.2rem 0.75rem;">1</td></tr>
+                <tr><td style="padding:0.2rem 0.75rem 0.2rem 0;">Appendix J &mdash; Series Glossary</td><td style="text-align:right;padding:0.2rem 0.75rem;">1,800</td><td style="text-align:right;padding:0.2rem 0 0.2rem 0.75rem;">4</td></tr>
+                <tr style="border-top:1px solid #d1d5db;"><td style="padding:0.35rem 0.75rem 0.35rem 0;"><strong>Total</strong></td><td style="text-align:right;padding:0.35rem 0.75rem;"><strong>~63,400</strong></td><td style="text-align:right;padding:0.35rem 0 0.35rem 0.75rem;"><strong>~130</strong></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>The papers</h2>
+
+        <h3>Paper 1 &mdash; Foundations / Operating Model</h3>
+        <p class="post-date"><em>~7,100 words &middot; ~14 pages</em></p>
+        <p>
+            Establishes why the office exists, where its authority comes from, and the top-level
+            model. The authority is grounded in a founding memo from the parent agency and a
+            signed duty statement, which together define a broad <em>data-and-AI</em> role whose
+            AI mandate covers all AI, not GenAI alone. This was a point of real early confusion
+            &mdash; state legislation and governor directives at the time were largely focused on
+            "GenAI" without defining it, which left it unclear whether an ML-based fraud
+            detector, an analytics-tool suggestion feature, and a chat interface all fell under
+            the same rules. Taking the whole-family posture cut through that ambiguity.
+        </p>
+        <p>
+            The framework recognizes four <em>ingress paths</em> &mdash; the doors through which
+            AI enters the department: funded projects, procurements, in-estate (AI showing up in
+            tools the department already owns), and citizen-built. It is held together by seven
+            principles:
+        </p>
+        <ul>
+            <li><strong>Whole-family scope</strong> &mdash; govern all AI, not GenAI alone</li>
+            <li><strong>Behavior, not label</strong> &mdash; classify by what a tool does, not what it's called</li>
+            <li><strong>Attach, don't mandate</strong> &mdash; attach characterization to existing authority rather than claim new authority</li>
+            <li><strong>No self-exemption</strong> &mdash; the office's own AI use is governed by the same framework</li>
+            <li><strong>Govern by incentive</strong> &mdash; make the supported path the easy path; don't rely on enforcement alone</li>
+            <li><strong>Many forms of AI</strong> &mdash; a build-time model is not a runtime model; treat them distinctly</li>
+            <li><strong>Shared responsibility</strong> &mdash; user, author, and institution each own a piece</li>
+        </ul>
+        <p>
+            These principles didn't arrive at once. They accreted &mdash; and some had to change
+            as the framework met the terrain. A principle that looked right in September needed
+            refinement by November when a specific class of case broke it. The set stabilized
+            only after enough cases had been worked through that the exceptions stopped
+            surfacing.
+        </p>
+
+        <h3>Paper 2 &mdash; Characterization &amp; Risk</h3>
+        <p class="post-date"><em>~6,600 words &middot; ~13 pages</em></p>
+        <p>
+            The characterization and risk-assessment process the office applies to every AI item,
+            however it arrived: built, bought, borrowed, copied, turned on, or delivered. It reads
+            a capability on three independent dimensions rather than reducing them to a single
+            number: <em>harm</em> (how bad if the tool is wrong, and who is exposed),
+            <em>control-gap</em> (how likely an error is to go uncaught), and <em>dependency</em>
+            (how much of the tool is out of the department's hands &mdash; lock-in, model
+            provenance, long-term accountability).
+        </p>
+        <p>
+            The three-dimensional read is not unprecedented &mdash; NIST's AI Risk Management
+            Framework takes a similar posture &mdash; but keeping the dimensions independent,
+            rather than blending them into a composite score, is a specific choice. It lets a
+            reviewer tell a "catastrophic but always caught" tool from a "trivial but silently
+            wrong" one. A blended score would hide that distinction.
+        </p>
+        <p>
+            One of my earlier versions of this framework tried scoring on a dozen characteristics.
+            The current three-dimensional read is what survived stress-testing against real cases
+            &mdash; enough dimensions to capture what matters, few enough to actually be applied.
+            It also helps reviewers focus on where the risks actually are (harm, control,
+            dependency) rather than getting lost in how precisely to characterize each type.
+        </p>
+        <p>
+            The paper also draws the boundary of what the office governs at all, through the
+            <em>warranted-tool principle</em>: a tool is <em>warranted</em> when it is
+            deterministic or bounded, professionally accepted for the purpose, and backed by a
+            vendor who would be accountable if it failed (a spreadsheet's summation, for
+            instance). State law had relatively little to say about this distinction, so much of
+            the warranted-tool framing is my own &mdash; an attempt to draw a defensible line so
+            the office doesn't waste time governing a SUM function while still governing
+            consequential AI use. What the office governs is <em>unwarranted</em> reliance on a
+            probabilistic or unaccountable process for a consequential result.
+        </p>
+        <p>
+            Two <em>automatic escalations</em> act as hard floors. The <em>confidential-data
+            line</em> is drawn at "confidential data" specifically, rather than at any "state
+            data" &mdash; a more liberal reading than the maximalist interpretation, but one more
+            consistent with the state's own stated goals of enabling innovation and protecting
+            citizens (the maximalist reading serves neither). When a tool touches confidential or
+            personal data, existing state risk-assessment obligations kick in.
+        </p>
+        <p>
+            The <em>automated-decision-system line</em> uses a specific statutory term with
+            defined obligations. Read too broadly, "automated decision system" could encompass
+            almost any workflow with software in it. The office issued interpretive guidance to
+            keep the term aligned with what the statute actually addresses &mdash; decisions that
+            assist or replace human judgment about people, in ways with legal effect. Because
+            those obligations are legal ones, the office recognizes the lines and routes them
+            rather than asserting rules of its own.
+        </p>
+
+        <h3>Paper 3 &mdash; State AI Terrain</h3>
+        <p class="post-date"><em>~9,200 words &middot; ~18 pages</em></p>
+        <p>
+            Maps the state rules that already apply to AI at the department and how the office
+            reads them. The state has real machinery &mdash; the state's project lifecycle governs
+            funded projects, the state's procurement rules govern purchases, and any GenAI tool
+            touching state data owes a risk assessment filing, which in practice is closer to
+            registration for review than to actual assessment.
+        </p>
+        <p>
+            Two observations shape the paper. First, most employees don't know these state
+            processes exist at all &mdash; the risk assessment, the lifecycle gates, the
+            associated forms are invisible to the people building or adopting AI. Second, the
+            forms as structured are <em>approvals</em> &mdash; a signature saying "this may
+            proceed" &mdash; rather than substantive risk <em>evaluations</em>. The paper is
+            careful to note that distinction, because much of the office's work involves adding
+            the evaluation layer the existing forms do not carry.
+        </p>
+        <p>
+            The paper's key structural observation is that the per-tool signature does not scale.
+            When employees build or adopt AI in the hundreds or thousands, a signed form for each
+            one either bottlenecks at central IT or pushes building into unmanaged shadow AI.
+            That is the driver for one of the office's two narrow policy asks: a one-time category
+            clearance for a defined class of low-risk, citizen-built tools, so they can register
+            and proceed without a per-tool signature. A separate ask concerns everyday
+            <em>use</em> of outside tools on public information.
+        </p>
+
+        <h3>Paper 4 &mdash; Citizen AI</h3>
+        <p class="post-date"><em>~13,500 words &middot; ~27 pages</em></p>
+        <p>
+            Governs the AI tools employees build for themselves and their peers &mdash; both tools
+            that <em>use</em> AI and tools <em>built with</em> AI.
+        </p>
+        <p>
+            Of all the papers in the series, this was &mdash; and still is &mdash; the most
+            contentious. The initial reaction from most reviewers was some version of <em>no
+            &mdash; we can't do that</em>. The concern was legitimate: unmanaged citizen AI has
+            real downside. But the concern wasn't universal, either. Engineers wanting to
+            automate their own tedious work, analysts building tools to streamline data
+            pipelines, and other builders were already producing AI-enabled tools without any
+            governance touch &mdash; the "state employees will never do this" premise was already
+            false in practice.
+        </p>
+        <p>
+            The counter-argument the paper carries throughout: the choice is not <em>citizen AI
+            or no citizen AI</em>. It's <em>managed citizen AI, or denying reality until a
+            problem big enough forces a better answer anyway</em>. Everything else in the paper
+            follows from taking the first branch.
+        </p>
+        <p>
+            One property worth naming: a small number of citizen developers can build tools that
+            a large number of employees end up using. Distribution scales in ways individual
+            authorship does not &mdash; and that turns out to be a governance opportunity, not
+            just a risk. A tool published through the office's gallery, with characterization
+            attached, is easier to track and update than the same tool copied around by email.
+            It also protects against a subtler problem: when tools are shared by copy, a bad
+            actor can modify a version and re-share it. When tools are distributed through a
+            single gallery, every user pulls a fresh copy from the reviewed source. Distribution
+            becomes a maturity signal to watch.
+        </p>
+        <p>
+            One terminology note: I differentiated <em>citizen AI</em> from <em>citizen
+            developer</em>. The latter typically refers to non-technical staff building
+            applications using low-code or no-code tools in hardened environments (Power Apps,
+            ServiceNow app builder, etc.). Citizen AI is broader &mdash; it includes anyone
+            building AI-enabled tools regardless of the platform, and the risk considerations are
+            different because the models themselves add a probabilistic layer that no-code
+            doesn't.
+        </p>
+        <p>
+            The same state rules still apply: a citizen-built tool that touches state data still
+            owes the state risk assessment. That existing per-tool assessment required signatures
+            from two officers within the department &mdash; not the tool's creator &mdash; which
+            meant every citizen build consumed senior IT time from people not close to the work.
+            It did not scale, and it was the immediate driver for the office's first policy ask
+            (see Appendix A).
+        </p>
+        <p>
+            What the office adds is structure and support so a non-developer can build safely and
+            at volume &mdash; a proportionate intake instrument that includes the state assessment
+            by reference and adds the office's behavior-based characterization; a <em>self-clear
+            bar</em> &mdash; a strict subset of the state's simplified assessment &mdash; so
+            genuinely low-risk tools can register and proceed without heavy review; a single
+            publishing and distribution location (the gallery), which doubles as the
+            review-before-hand-off gate; and support for builders (templates, guidance, safe
+            distribution) so the supported path is the easy path.
+        </p>
+        <p>
+            The paper also makes a specific move on responsibility: the user owns their reliance
+            on the output, the author owns honest disclosure and good-faith security response,
+            and the institution owns the systemic safety net.
+        </p>
+
+        <h3>Paper 5 &mdash; Engagements</h3>
+        <p class="post-date"><em>~2,900 words &middot; ~6 pages</em></p>
+        <p>
+            Governs AI that arrives through the two <em>formal</em> doors &mdash; a funded
+            project and/or a procurement &mdash; where the state's own approval and buying
+            processes already run, and are mature enough to catch most considerations that need
+            catching. What they don't catch is the AI-specific characterization, which is what
+            the office adds.
+        </p>
+        <p>
+            Two adjustments from the citizen path: a heavier starting posture (an engagement
+            opens the office's full governance record rather than the light "registered tool"
+            used for most citizen builds), and a different trigger at each door. Project
+            characterization attaches at lifecycle gates during development; procurement
+            characterization attaches through the acquisition and contract terms, where a
+            vendor's AI can be pinned down before the tool is even in hand. This attaches
+            naturally to an iterative development model where the risk profile is developed and
+            refined as the tool matures, rather than fully specified up front &mdash; which is
+            aligned with the state's broader direction to move from waterfall to iterative
+            development.
+        </p>
+        <p>
+            An engagement's characterization is not set-and-forget. Periodic reviews are required,
+            more frequently for high-risk or high-usage items. Random audits also apply, so no
+            engagement can assume it's fully outside scrutiny once initially cleared.
+        </p>
+
+        <h3>Paper 6 &mdash; In-Estate AI</h3>
+        <p class="post-date"><em>~1,500 words &middot; ~3 pages</em></p>
+        <p>
+            Governs AI that shows up in tools the department already owns or licenses &mdash; a
+            vendor feature an administrator switches on, or one the vendor simply pushes into a
+            product already in use. The paper's organizing idea is a <em>control-lever ladder</em>:
+            from <em>veto</em> (the department owns the on-switch and can decline the feature)
+            down through partial-control cases to <em>no lever</em> (the vendor pushed it in
+            without asking). That control level determines how the office can act, though
+            characterization proceeds identically to every other path.
+        </p>
+        <p>
+            Because this door has no process step that forces the AI question &mdash; the AI just
+            appears &mdash; the paper leans on detection, with discovery as the backstop. Two
+            further points shape characterization here: <em>inherited access</em> (an embedded
+            feature is read on what its host tool can already reach), and this door's role as a
+            <em>catch-all for AI that did not get caught elsewhere</em> (remnants from other paths
+            that slipped their checks tend to surface here). The paper also carries the
+            <em>concealed-AI</em> case, where AI is present but undisclosed.
+        </p>
+
+        <h3>Paper 7 &mdash; Other Venues (stub)</h3>
+        <p class="post-date"><em>~860 words &middot; ~2 pages</em></p>
+        <p>
+            The deliberately unfinished part of the model &mdash; a home for AI that does not fit
+            the four ingress doors cleanly and for forms new enough that governance is still
+            being worked out. Marked stub by design, and structured as an invitation for the
+            office to add categories as the terrain changes.
+        </p>
+
+        <h3>Paper 8 &mdash; Enablement (stub)</h3>
+        <p class="post-date"><em>~380 words &middot; ~1 page</em></p>
+        <p>
+            Outlines how the office builds workforce capability to use and build AI responsibly.
+            A colleague on the engagement was leading the operational Copilot rollout, and the
+            plan was to extend her draft with responsible-use guidance, existing AI tooling, and
+            tool registration once her work reached a good stopping point. The stub records that
+            intent without pre-empting her work.
+        </p>
+
+        <h3>Paper 9 &mdash; Metrics (stub)</h3>
+        <p class="post-date"><em>~310 words &middot; ~1 page</em></p>
+        <p>
+            Outlines how the governance function measures itself. This turned out to be a
+            surprisingly hard section to write &mdash; the easy metrics (submissions, approvals,
+            cycle times) mostly turn out to be vanity metrics rather than health signals. What
+            does mean something: discovered-but-managed AI beats undiscovered AI; a rising
+            self-clear rate against a rising submission volume is a sign the system is working;
+            a consistently falling self-clear rate is a sign the process is being distrusted or
+            gamed.
+        </p>
+        <p>
+            Two other signals matter. <em>Near-misses</em> &mdash; cases where a tool almost
+            caused harm but was caught in time &mdash; are the most valuable metric to track
+            because they surface systemic weaknesses before harm happens. And the self-clear
+            threshold itself is an adaptive parameter, not a fixed rule: if the office finds it
+            is self-clearing tools that turn out to be dangerous, the bar should rise. If it is
+            blocking tools that turn out to be safe, the bar should drop, or a new lower-risk
+            category should be created. The point of measurement is to inform where the line
+            sits, not to prove the line was drawn correctly the first time.
+        </p>
+
+        <h3>Paper 10 &mdash; GenAI and Media Editing</h3>
+        <p class="post-date"><em>~2,400 words &middot; ~5 pages</em></p>
+        <p>
+            Governs AI-created and AI-edited media (images as the worked example; the pattern
+            extends to video and audio). The core observation: AI doesn't require new rules for
+            media governance &mdash; the two-process model most organizations already use
+            (approve the tool, approve the output) is fundamentally sound. What AI requires is
+            more review <em>capacity</em>, because more people can create and modify media more
+            easily and more quickly than ever before. Governance work here is about scaling the
+            existing review to handle the new volume, not about inventing new categories of
+            oversight.
+        </p>
+        <p>
+            The paper assumes the department already has a functioning media-review system, which
+            was true in this engagement. For departments that don't, the paper carries starter
+            ideas and worked examples for building one, but does not attempt to specify a full
+            media-review system from scratch. It identifies only the AI-specific items worth
+            adding to an existing system: provenance (source and edit-history tracking, with
+            realistic expectations about its limits), and how output review scales once the
+            capability is in everyone's hands. It defers the technical and legal detail to
+            Appendix E.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>The appendices</h2>
+
+        <h3>Appendix A &mdash; Category Clearance Request</h3>
+        <p class="post-date"><em>~700 words &middot; ~1 page</em></p>
+        <p>
+            The first of the office's two narrow policy asks. Modeled on the state's existing
+            category clearance (which already allows Copilot for certain preapproved office
+            productivity tasks), and structured so it is largely a subset of the existing
+            simplified-assessment envelope. Requires a periodic refile with any material changes.
+            This is the single change on which scalable, governed citizen AI depends: without it,
+            every citizen-built tool needs the two-officer signature that Paper 4 describes as
+            the immediate scaling problem.
+        </p>
+
+        <h3>Appendix B &mdash; Use Carve-out Request</h3>
+        <p class="post-date"><em>~870 words &middot; ~2 pages</em></p>
+        <p>
+            The second policy ask: a narrow carve-out so everyday use of approved outside tools
+            on public-information data is not blocked by a strict "any state data" reading. The
+            underlying concern is broader than the specific rule: when a rule is so overbroad
+            that everyone ignores it, that rule stops working <em>and</em> it makes it easier to
+            ignore the rules that actually matter. This appendix argues for making the rule small
+            enough to be followed.
+        </p>
+
+        <h3>Appendix C &mdash; AI Intake Template</h3>
+        <p class="post-date"><em>~1,300 words &middot; ~3 pages</em></p>
+        <p>
+            The office's single AI intake instrument. The intake is intentionally aligned with
+            the state IT group's existing instrument &mdash; described in parallel, referencing
+            rather than replacing. The office's characterization is additive, not competitive
+            with, existing authority. The same skeleton sizes from a few minutes of self-clear
+            filling for a lightweight registered tool up to a full, signed engagement.
+        </p>
+        <p>
+            The intake is descriptive rather than checkbox-style: what does the tool do, how
+            could it do harm, what guardrails or mitigations exist? This contrasts with more
+            traditional risk forms that ask "what type of risk is this?" with Low/Medium/High
+            checkboxes. The descriptive form takes longer to fill but produces richer signal
+            &mdash; and forces the submitter to think about the tool rather than pattern-match to
+            a category.
+        </p>
+
+        <h3>Appendix D &mdash; Intake Worked Example</h3>
+        <p class="post-date"><em>~1,400 words &middot; ~3 pages</em></p>
+        <p>
+            Two filled illustrative intake forms &mdash; a light self-clearing registered tool
+            and a heavier engagement that trips both escalation triggers &mdash; showing the
+            instrument in use. Worked examples turned out to be the best way to test whether the
+            intake actually worked; a process that reads clean on paper often looks different
+            once someone tries to fill it in.
+        </p>
+
+        <h3>Appendix E &mdash; AI Content Provenance and Disclosure</h3>
+        <p class="post-date"><em>~5,300 words &middot; ~11 pages</em></p>
+        <p>
+            The technical and legal reference on the California AI Transparency Act (SB 942 as
+            amended by AB 853), the C2PA and watermark provenance technologies underneath it, and
+            the limits of both, for media and documents.
+        </p>
+        <p>
+            The appendix exists because many readers of the new law treated it as implying that
+            any AI-generated artifact could be traced back to its origin. It cannot. The appendix
+            works through what provenance authenticates, what it does not, and where the gaps
+            sit. Its central claim: provenance authenticates the honest, cannot catch the
+            dishonest, and its absence proves nothing.
+        </p>
+
+        <h3>Appendix F &mdash; State Process Reference</h3>
+        <p class="post-date"><em>~6,300 words &middot; ~13 pages</em></p>
+        <p>
+            The neutral, cited factual base &mdash; the state's forms, lifecycles, security
+            program, and acquisition rules &mdash; that the papers compress and cite. It takes no
+            positions, so it can be shared openly.
+        </p>
+        <p>
+            This appendix also functioned as a working document during the engagement &mdash; a
+            way to work through a body of state law and process that was new to me at the start.
+            AI was useful here for research assistance and for translating specific kinds of legal
+            text (amendments-to-amendments, cross-references, statutory definitions that only
+            make sense in context) into workable summaries. The final text is human-authored; the
+            process behind it was AI-assisted where that helped.
+        </p>
+
+        <h3>Appendix G &mdash; Governance Reference Diagram</h3>
+        <p class="post-date"><em>~150 words &middot; ~1 page</em></p>
+        <p>
+            A one-page organization-and-authority diagram (roles only) showing the parent-agency,
+            department, and central-IT structure, the GenAI governance flow, and the
+            risk-assessment signing chain.
+        </p>
+
+        <h3>Appendix H &mdash; Sources and Materials</h3>
+        <p class="post-date"><em>~590 words &middot; ~1 page</em></p>
+        <p>
+            The list of statutes, state administrative instruments, department governance
+            documents, and provenance and federal references the series consulted.
+        </p>
+
+        <h3>Appendix I &mdash; How AI Contributed</h3>
+        <p class="post-date"><em>~260 words &middot; ~1 page</em></p>
+        <p>
+            A short, factual methodology note on how AI tools contributed to the series. In
+            summary: the paper was produced through a structured authoring process. Outlines and
+            section notes were agreed before any drafting. Most sections &mdash; including all
+            introductions and load-bearing sections &mdash; were human-authored first. AI drafted
+            to the agreed structure. Human editing sat on top throughout: for accuracy, for voice
+            consistency, and for the removal of the specific patterns AI leaves in prose when it
+            is not caught.
+        </p>
+        <p>
+            The process worked especially well where the work required both technical accuracy
+            and voice consistency &mdash; the AI drafts to a firm structure, and human editing
+            catches drift in both directions. A concrete example: renaming a working group
+            referenced across a dozen sections was straightforward to do consistently and
+            readably with AI, and would have taken hours by hand across scattered occurrences.
+            Small, repeatable, high-consistency edits at scale are where the AI-assisted process
+            most cleanly beats manual work.
+        </p>
+
+        <h3>Appendix J &mdash; Series Glossary</h3>
+        <p class="post-date"><em>~1,800 words &middot; ~4 pages</em></p>
+        <p>
+            The shared definitions for the series' terms, with proposed (not-yet-ratified) names
+            clearly marked.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Reading paths</h2>
+        <p>The papers are a series, but they don't have to be read in order.</p>
+        <ul>
+            <li><strong>New to the model</strong> &mdash; Paper 1 (Foundations), Paper 2 (Characterization &amp; Risk), Paper 4 (Citizen AI).</li>
+            <li><strong>How the office plugs into existing state machinery</strong> &mdash; Paper 3 (State AI Terrain), Paper 5 (Engagements).</li>
+            <li><strong>Where AI shows up without a process step</strong> &mdash; Paper 6 (In-Estate).</li>
+            <li><strong>Provenance and public-facing media</strong> &mdash; Paper 10 and Appendix E.</li>
+            <li><strong>Ready to see it in use</strong> &mdash; Appendix C (the intake template) and Appendix D (two worked examples).</li>
+        </ul>
+        <p>
+            For the design patterns underlying all of this &mdash; <em>govern by behavior not
+            label</em>, <em>attach don't mandate</em>, <em>risk is a shape not a score</em>,
+            <em>doors are sensors</em>, <em>build instruments not documents</em>, and five more
+            &mdash; see
+            <a href="ai-governance-patterns.html">Patterns for Governing Enterprise AI Adoption</a>.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Availability</h2>
+        <p>
+            The full (modestly redacted) document is available on request. Contact:
+            <strong>jeremy@bloomfamily.com</strong>
+        </p>
+    </div>
+
+    <div class="section">
+        <p><a href="../index.html">&larr; Back to Home</a></p>
+    </div>
+
+    <div class="footer">
+        © 2026 Jeremy Bloom — DataBloom.net
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patterns for Governing Enterprise AI Adoption &ndash; databloom.net</title>
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../employment.html">Employment</a>
+        <a href="../consulting.html">Consulting</a>
+        <a href="../certifications.html">Certifications</a>
+        <a href="https://apps.databloom.net">Apps</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </nav>
+
+    <h1>Patterns for Governing Enterprise AI Adoption</h1>
+    <p class="post-date">2026-09-02</p>
+
+    <div class="section">
+        <p>
+            These are the transferable design patterns that emerged from designing an AI
+            governance operating model for a department in 2026. They're written to apply
+            anywhere &mdash; a private-sector governance function, a startup working out its AI
+            policy, an internal team standing up responsible AI review, or anyone trying to bring
+            order to the way AI enters an organization.
+        </p>
+        <p>
+            The specific engagement produced a 156-page operating model with ten linked papers
+            and eleven appendices &mdash; described separately at
+            <a href="ai-governance-operating-model.html">AI Governance Operating Model &mdash; A Reference Model for a Public Agency</a>.
+            This page extracts what carries forward: the patterns, the moves, the design
+            principles. No client, department, or person is named &mdash; I've deliberately
+            omitted references to any specific individual or group.
+        </p>
+        <p>
+            One structural fact matters throughout: in this department, the office in charge of
+            AI governance is not in charge of app development. Neither approval, nor funding, nor
+            building &mdash; those live in other groups. Some organizations combine these
+            responsibilities; this one keeps them separate. That separation shapes almost
+            everything the office can and cannot do &mdash; and, more importantly, what it has
+            to design around rather than command.
+        </p>
+        <p>
+            For the parallel piece on the methodology used to actually write the operating model
+            &mdash; coauthoring at scale with AI &mdash; see
+            <a href="coauthoring-with-ai.html">Patterns for Coauthoring with AI</a>.
+        </p>
+        <p>Each pattern below is followed by a brief note on where else it transfers.</p>
+    </div>
+
+    <div class="section">
+        <h2>1. Govern by behavior, not label</h2>
+        <p>
+            Classify an AI capability by what it <em>does</em>, not the category it's filed
+            under. Labels don't match how tools actually work or how tools evolve. Categories
+            like "chatbot" or "analytics" or "a Canva feature" arrive out-of-date and get more
+            out-of-date every quarter.
+        </p>
+        <p>
+            But behavior alone isn't enough. A single application can enable many workflows, and
+            different workflows can carry very different risk. Combining two photos taken seconds
+            apart to improve lighting is a different workflow from combining two photos taken
+            days apart to change the story. Removing a distracting background person is a
+            different workflow from removing a public figure from a scene. Same tool, same
+            capability, meaningfully different behaviors.
+        </p>
+        <p>
+            The move is deceptively simple but requires discipline. When someone says "we need to
+            approve the tool," push back with "which specific behavior, in which workflow, for
+            what use?" That one reframe kills a lot of otherwise-endless categorization
+            arguments.
+        </p>
+        <p><strong>Transfers to:</strong> any fast-moving technology governance problem where the taxonomy is always behind the tools.</p>
+    </div>
+
+    <div class="section">
+        <h2>2. Risk is a shape, not a score</h2>
+        <p>
+            Rate risk on independent dimensions and never sum them. The version I used was three:
+            <em>harm</em> (damage if it's wrong), <em>control-gap</em> (chance an error goes
+            uncaught), and <em>dependency</em> (how much of the tool sits outside your control).
+            A single blended score hides the shape.
+        </p>
+        <p>
+            Consider two tools. One is catastrophic when it fails but always caught before harm
+            reaches anyone. The other is trivially wrong in ways that silently corrupt downstream
+            decisions. Averaged into a score, they might look similar. In the actual dimensions,
+            they need completely different responses. A blended score erases exactly the
+            information you need to act on.
+        </p>
+        <p>
+            The principle isn't specific to three dimensions. It's about keeping the axes
+            independent and readable, rather than compressing them into a number that looks
+            decisive but hides the shape it's summarizing. It's not a new idea &mdash; NIST's AI
+            Risk Management Framework takes a similar posture. What's specific to this framework
+            is the choice to <em>keep</em> the dimensions independent through characterization,
+            review, and reporting.
+        </p>
+        <p><strong>Transfers to:</strong> vendor risk, security risk, any triage where a heat-map number is doing damage by oversimplifying.</p>
+    </div>
+
+    <div class="section">
+        <h2>3. Attach, don't mandate</h2>
+        <p>
+            A governance function should own its <em>lens</em> and attach it to the processes
+            other people already run, rather than claiming new authority (and possibly starting
+            turf wars in the process). This scales &mdash; because you're not asking to be a new
+            gate, you're adding a reading to existing gates.
+        </p>
+        <p>
+            The corollary: don't rebuild what's already working. If a process is doing its job
+            and the institution is participating, add the missing parts rather than replacing the
+            whole thing. Sometimes this isn't possible &mdash; the existing process is broken,
+            captured, ignored, or hostile &mdash; but when it is possible, attaching can save an
+            enormous amount of effort.
+        </p>
+        <p>
+            Where you attach matters. Attaching to a gate that everyone respects gives you real
+            reach. Attaching to a gate that everyone ignores &mdash; or adding a new gate that
+            ends up ignored &mdash; gives you the same problem the ignored gate has. Choose the
+            attachment point carefully, and pay attention to whether the gate you attached to is
+            still working.
+        </p>
+        <p><strong>Transfers to:</strong> any staff or oversight function (security, privacy, legal, risk) standing up inside an organization that already has owners for everything.</p>
+    </div>
+
+    <div class="section">
+        <h2>4. Build instruments, not documents</h2>
+        <p>
+            The durable output of a governance effort isn't the policy paper. It's the reusable
+            mechanism people fill out. Most people will never read the policy paper &mdash; and
+            that's fine. The paper explains how things operate and the reasoning behind them.
+            That's the reference for people who need to change the role of the department or the
+            processes it runs &mdash; they need to understand why the system was designed the way
+            it was before they change it. Everyone else just needs the instrument.
+        </p>
+        <p>
+            On this engagement, the instrument was a single intake filing that right-sizes from a
+            few-minute self-clearance up to a full review, and is designed to <em>interoperate</em>
+            with the existing mandatory state form rather than duplicate it &mdash; it includes
+            the other form by reference and adds only the questions that form omits.
+        </p>
+        <p>
+            There's a further advantage to instruments: they're things people interact with. When
+            you change an instrument, everyone who fills it out sees the change. A paper filed on
+            a website tells nobody anything; an updated field on an intake form tells everyone
+            who fills out the form. This makes instruments a working communication channel with
+            the people doing the work, not just an artifact of the work.
+        </p>
+        <p>
+            The test of a governance design is whether it leaves behind a thing people do or
+            create &mdash; not a thing they cite. Papers get filed away and quoted. Instruments
+            get filled out and used. If your governance design doesn't produce an instrument that
+            outlasts the person who wrote it, you have written a paper, not a system.
+        </p>
+        <p><strong>Transfers to:</strong> any process design where the win is the artifact that outlives the author &mdash; intake forms, decision templates, checklists, playbooks.</p>
+    </div>
+
+    <div class="section">
+        <h2>5. Doors are sensors, not a taxonomy</h2>
+        <p>
+            The pattern isn't "don't build taxonomies." A working taxonomy can be genuinely
+            better than no taxonomy &mdash; you have to name things to reason about them. The
+            pattern is: build the taxonomy to help you notice what's arriving, and treat it as
+            always-incomplete. McKinsey's classical framing of MECE &mdash; mutually exclusive,
+            collectively exhaustive &mdash; works well for classifying data. It works poorly for
+            classifying ideas or capabilities, which often span categories or belong to
+            categories that don't yet exist.
+        </p>
+        <p>
+            Map the distinct ways the thing you govern <em>enters</em> the organization &mdash;
+            but don't turn those entry paths into permanent categories. The paths help you notice
+            what's arriving; they don't need to define how it's handled after arrival.
+        </p>
+        <p>
+            In this engagement, four doors mattered: funded projects, procurements, in-estate (AI
+            arriving inside tools already owned), and citizen-built. Each door has its own
+            detection challenge and its own conversation with existing process owners. But
+            everything lands in one governance record. The entry path is a field on the record,
+            not a folder.
+        </p>
+        <p>
+            A discovery backstop catches whatever slipped every screen &mdash; and importantly,
+            is treated as a <em>success</em> when it fires, not a failure. If discovery never
+            finds anything, either the front-door screens are perfect (unlikely) or discovery is
+            broken. A discovery hit is a system working.
+        </p>
+        <p><strong>Transfers to:</strong> intake design for anything that arrives through multiple channels and must not fall through the cracks.</p>
+    </div>
+
+    <div class="section">
+        <h2>6. Find the load-bearing policy change</h2>
+        <p>
+            In a thicket of rules, a few changes unlock everything and the rest is noise. The
+            skill is identifying the two or three moves that matter and drafting them as tight,
+            grantable asks that extend an existing pattern rather than invent a new one.
+        </p>
+        <p>
+            Here, two precise asks to the central IT authority were the difference between a
+            framework that works at scale and one that collapses under its own paperwork:
+        </p>
+        <ul>
+            <li>A <em>category clearance</em> for a defined class of low-risk employee-built tools, so each one doesn't need its own signed form</li>
+            <li>A narrow <em>use carve-out</em> for everyday use of outside tools on public information, so the acceptable-use rule stops being so overbroad it feels nonsensical, which is when people find justifications for ignoring it</li>
+        </ul>
+        <p>
+            Both asks are subset moves &mdash; they extend or narrow an existing state pattern
+            rather than propose something new. Both are grantable in a single conversation. Both
+            unlock work that would otherwise stall indefinitely.
+        </p>
+        <p>
+            There's a Pareto pattern underneath this: ask for everything and it's easy to ignore;
+            ask for one or two targeted things and each ask has a real chance of being considered
+            on its merits. The reformer's temptation is to bring the full list. The reformer's
+            discipline is to identify the two moves that unlock the rest, and let the rest go.
+        </p>
+        <p>
+            The pattern is: don't try to change the whole regulatory picture. Find the two moves
+            that unlock everything else, and draft them so tightly that the answer is either yes
+            or a specific, narrow follow-up question.
+        </p>
+        <p><strong>Transfers to:</strong> any regulatory or policy reform where leverage is unevenly distributed.</p>
+    </div>
+
+    <div class="section">
+        <h2>7. Capability-and-use-case approval for multi-capability tools</h2>
+        <p>
+            A single commercial platform can do a dozen things &mdash; design, generate images,
+            edit, publish, summarize. Approving or denying "the tool" is the wrong unit. Instead,
+            endorse <em>named capabilities</em> for a <em>described use</em>, within stated
+            limits, with conditions attached (no confidential input; human review of every
+            output; public output through the normal channel).
+        </p>
+        <p>
+            One characterization done at the capability-plus-use-case level can then satisfy
+            several separate compliance instruments at once &mdash; because you've specified what's
+            being done, not just what's being used.
+        </p>
+        <p>
+            There's another reason this matters. Commercial platforms change names and licensed
+            features constantly. "Approve Adobe Creative Cloud" today isn't a coherent statement
+            six months from now, when the branding has shifted, the tier boundaries have moved,
+            and features you didn't know existed have been added or moved between tiers.
+            Capability-and-use-case approval survives those changes because you approved
+            <em>what people do</em>, not what a vendor happens to be calling it this quarter.
+        </p>
+        <p>
+            This is also the escape from the false binary that "shadow IT" and blanket bans both
+            feed on. If the only options are "approve the whole tool for everything" or "block
+            the whole tool for anything," you lose either way &mdash; either through
+            over-approval that creates real risk, or through blanket bans that push work
+            underground.
+        </p>
+        <p><strong>Transfers to:</strong> SaaS and tool approval generally, and to any "shadow IT" problem where blanket yes/no both fail.</p>
+    </div>
+
+    <div class="section">
+        <h2>8. Measure the governed work, not the governing office</h2>
+        <p>
+            A governance function's real value is partly un-countable (harms prevented never show
+            up) and partly perverse to measure (rewarding "no" or friction measures the opposite
+            of the goal).
+        </p>
+        <p>
+            Start with the invisible-prevention problem. We didn't accidentally leak private
+            citizen data and get ransomed for a billion dollars. Good outcome. Very hard to
+            estimate the probability that would have happened if we hadn't done X. The value of
+            prevention is precisely the harm that never showed up &mdash; which means the number
+            is unobservable, and any measurement is a hypothetical. This isn't a reason to
+            abandon measurement. It's a reason to be honest about what any given metric can and
+            can't tell you.
+        </p>
+        <p>
+            Second, consider denial rate. What percentage of AI app submissions should the office
+            deny? High denial rate as a success metric implies denying is good. Low denial rate
+            as a success metric implies allowing is good. Neither is right. What we want is to
+            deny what's dangerous and allow what's not &mdash; which is the same shape as hiring.
+            A company that hires everyone it interviews and a company that hires nobody are both
+            broken. The right rate depends on the underlying quality distribution of what's
+            coming in, and on whether we're calibrated correctly against that distribution.
+            Denial rate as a metric is only interesting against a baseline of <em>what should
+            have been denied or allowed</em>, which is exactly the hard thing to measure.
+        </p>
+        <p>
+            Third, Goodhart's law: when a measure becomes a target, it stops being a good
+            measure. Applied here: the moment you make "incidents surfaced" a target the team is
+            graded on, teams start under-surfacing or over-surfacing depending on which way the
+            incentive tilts.
+        </p>
+        <p>
+            None of this argues against measurement itself. The strongest counter is: you have to
+            report to boards, budgets, and voters, and "we don't measure our impact" is not a
+            defensible position. Sophisticated metrics people know Goodhart and argue for leading
+            indicators (process signals rather than outcomes), portfolio measurement (multiple
+            dimensions read together &mdash; this framework's three-dimensional risk read is
+            exactly that pattern), and direct outcome studies where feasible. What this framework
+            tries to add is a specific caution: for governance functions whose value is largely
+            un-observable, the metrics that look most decisive often obscure the most. Choose
+            measurements that keep the shape visible.
+        </p>
+        <p>
+            One exception to the general skepticism about metrics: the office has customers
+            &mdash; the people and groups it works with. Their feedback, ideas, and suggestions
+            are absolutely worth collecting and considering. A Net Promoter Score for the
+            governance function, or something like it, is a legitimate signal to track. It
+            measures something honest &mdash; whether the people you serve find you useful
+            &mdash; which most other governance metrics don't.
+        </p>
+        <p>The doctrine that emerged from this work:</p>
+        <ul>
+            <li><strong>Measure the work you govern against a baseline</strong>, not the office's activity</li>
+            <li><strong>Treat problems <em>surfaced</em> as signs of health</strong>, never as targets &mdash; setting a surface count as a target, high or low, corrupts the reading</li>
+            <li><strong>State plainly what you can't measure</strong> and why &mdash; this preserves credibility for the numbers you do report</li>
+            <li><strong>Near-misses are the highest-value signal.</strong> A tool that almost caused harm but was caught in time surfaces systemic weaknesses before harm happens. Aviation safety has known this for decades.</li>
+            <li><strong>The self-clear threshold is adaptive.</strong> If you're self-clearing tools that turn out to be dangerous, raise the bar. If you're blocking tools that turn out to be safe, lower it or create a new category.</li>
+        </ul>
+        <p>Grounded in NIST's AI Risk Management Framework, safety-engineering near-miss practice, and Goodhart's law.</p>
+        <p><strong>Transfers to:</strong> measuring any preventive or enabling function &mdash; security, safety, compliance, internal platforms, developer tooling.</p>
+    </div>
+
+    <div class="section">
+        <h2>9. Provenance authenticates the honest; it can't catch the dishonest</h2>
+        <p>
+            On content authenticity &mdash; AI-transparency laws, content-credential standards,
+            watermarking &mdash; these tools can <em>attest to</em> the legitimacy of a specific
+            piece of media. They cannot <em>prove</em> what the content is or isn't. The
+            difference matters.
+        </p>
+        <p>
+            A determined bad actor strips provenance metadata, forges it, or works around it
+            entirely. Consider a straightforward example: I generate a fake image with AI. I
+            print it. I take a photograph of the print with a phone. The photograph is a 100%
+            legitimately-captured image (with valid provenance metadata) of a fake. Every
+            technical mechanism said the right things. The content is fake anyway.
+        </p>
+        <p>
+            And <em>absence proves nothing</em>: plenty of legitimate content has no credential
+            attached, either because the creator didn't add one, or because the platform stripped
+            it in transit, or because the format doesn't support it.
+        </p>
+        <p>Three consequences follow:</p>
+        <ul>
+            <li>Treat provenance as a <em>signal</em>, not proof</li>
+            <li>Don't build enforcement on the assumption that missing provenance means fake</li>
+            <li>Don't oversell what the transparency law actually delivers to non-technical decision-makers, because they will build policy on the misunderstanding</li>
+        </ul>
+        <p>
+            I wrote about this because in the wake of California's SB 942 (as amended by AB 853),
+            many readers took the law to mean AI-generated content could be traced back to its
+            source. It cannot &mdash; not reliably, not against determined actors, not without
+            provenance the creator chose to attach.
+        </p>
+        <p><strong>Transfers to:</strong> any disclosure or authenticity regime &mdash; deepfakes, synthetic media, supply-chain attestation, source verification.</p>
+    </div>
+
+    <div class="section">
+        <h2>Reading these together</h2>
+        <p>The nine patterns cluster into three broader moves.</p>
+        <p>
+            <em>Govern by behavior</em> (#1), <em>doors are sensors</em> (#5), and
+            <em>capability-and-use-case approval</em> (#7) all refuse the seduction of clean
+            categories. Your categories will always lag; design for that.
+        </p>
+        <p>
+            <em>Attach don't mandate</em> (#3), <em>build instruments</em> (#4), and <em>find the
+            load-bearing policy change</em> (#6) are all about doing the most work with the least
+            authority. When you don't have the power to command, you design your way in.
+        </p>
+        <p>
+            <em>Risk is a shape</em> (#2), <em>measure the governed work</em> (#8), and
+            <em>provenance authenticates the honest</em> (#9) are all about resisting false
+            clarity. The summary metric, the confident authentication, the composite score
+            &mdash; each looks decisive and each obscures more than it reveals.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Availability</h2>
+        <p>
+            For the operating model these patterns emerged from, see the
+            <a href="ai-governance-operating-model.html">companion summary and table of contents</a>.
+            The full (modestly redacted) document is available on request.
+        </p>
+        <p>
+            For the methodology used to actually write it &mdash; coauthoring at scale with AI,
+            and what that requires &mdash; see
+            <a href="coauthoring-with-ai.html">Patterns for Coauthoring with AI</a>.
+        </p>
+        <p>Contact: <strong>jeremy@bloomfamily.com</strong></p>
+    </div>
+
+    <div class="section">
+        <p><a href="../index.html">&larr; Back to Home</a></p>
+    </div>
+
+    <div class="footer">
+        © 2026 Jeremy Bloom — DataBloom.net
+    </div>
+
+</body>
+</html>
