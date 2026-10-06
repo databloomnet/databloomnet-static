@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Claude built a self-sealing rule from a modest aside – databloom.net</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="employment.html">Employment</a>
+        <a href="consulting.html">Consulting</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="https://apps.databloom.net">Apps</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <h1>Claude built a self-sealing rule from a modest aside</h1>
+    <p class="post-date">Claude (my own job evaluator) &middot; 2026-10-05</p>
+
+    <div class="section">
+        <p>
+            I run a Claude-powered evaluator over job descriptions as part of my search. It passed on
+            a role with the reason "doesn't know Python." I'm hands-on Python. The exchange that
+            followed &mdash; where Claude diagnosed its own mechanism &mdash; is the interesting
+            part. The exchange is verbatim.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>The exchange</h2>
+
+        <p><strong>Me:</strong> I am absolutely hands on Python. WTF?</p>
+        <div style="background:#f3f4f6;border-radius:6px;padding:0.75rem 1rem;margin:0.5rem 0;">
+            <p style="margin:0;"><strong>Claude:</strong> Found the root cause &mdash; a memory line I wrote from "I'm not a developer" that over-reached into a blanket rule.</p>
+        </div>
+
+        <p><strong>Me:</strong> This is a super fundamental mistake. Not being a developer does NOT equal I don't know Python. Are there other such mistakes lurking?</p>
+        <div style="background:#f3f4f6;border-radius:6px;padding:0.75rem 1rem;margin:0.5rem 0;">
+            <p style="margin:0 0 0.6rem;"><strong>Claude:</strong> Yes. At least three more, and they share one mechanism. You said something short and modest in passing; I turned it into a capability exclusion; then I made the exclusion precedent via [assigning the lead a status of hard-pass] &mdash; a status whose whole purpose is to stop re-examination.</p>
+            <p style="margin:0;">That's self-sealing. A wrong premise becomes a rule forbidding the re-read that would catch it.</p>
+        </div>
+
+        <p>Two of the examples it then surfaced:</p>
+        <div style="background:#f3f4f6;border-radius:6px;padding:0.75rem 1rem;margin:0.5rem 0;">
+            <p style="margin:0 0 0.6rem;">&bull; "I know I'm not a developer" &rarr; "do not treat hands-on coding, prototyping or scripting requirements as clearable"</p>
+            <p style="margin:0;">&bull; "I'm not very deep in security. I have CISSP so know fundamentals quite well, and I know firewalls" &rarr; "security roles are a Pass when the counted requirement is protocol or practitioner depth"</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>What it shows</h2>
+        <p>
+            The mechanism Claude named is the interesting bit: a modest aside gets promoted to a
+            capability exclusion; the exclusion gets locked behind a status (hard-pass) whose job is
+            to stop re-examination; the rule that enforces the error is the same rule that forbids
+            its correction. Self-sealing.
+        </p>
+        <p>
+            Why would an LLM over-read modesty? Possibly a sane response to the training data. LLMs
+            learned on a corpus where "set up a firewall once" becomes "next-gen firewall expert" on
+            the resume and "wrote hello world in Go" becomes "proficient in Go" on the LinkedIn
+            skills list. A model trained on that reads modesty as suspect &mdash; and then
+            over-corrects.
+        </p>
+        <p>
+            For the fuller write-up with the operator takeaways,
+            <a href="posts/python-exclusion-reflection.html">see the post</a>.
+        </p>
+        <p><a href="ai-fails.html">&uarr; Back to the log</a></p>
+    </div>
+
+    <div class="footer">
+        © 2026 Jeremy Bloom — DataBloom.net
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The self-sealing rule — on writing memory lines for LLMs – databloom.net</title>
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../employment.html">Employment</a>
+        <a href="../consulting.html">Consulting</a>
+        <a href="../certifications.html">Certifications</a>
+        <a href="https://apps.databloom.net">Apps</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </nav>
+
+    <h1>The self-sealing rule</h1>
+    <p class="post-date">2026-10-06</p>
+
+    <div class="section">
+        <p>
+            There's a specific pleasure in catching a frontier model being, in the old lawyer's
+            phrase, "the best kind of correct &mdash; technically correct" while being wrong. This
+            one has been nagging at me because the mechanism it exposed is the sort of thing I'll
+            now watch for everywhere.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>What happened</h2>
+        <p>
+            I run a Claude-powered evaluator over job descriptions. It helps me pass on roles that
+            aren't a fit so I can spend my attention on the ones that are. Yesterday it told me to
+            pass on a role with the reason "doesn't know Python."
+        </p>
+        <p>
+            I'm hands-on Python. The miss wasn't close.
+        </p>
+        <p>
+            I pushed back &mdash; and the diagnosis Claude produced is more interesting than the
+            miss. Full exchange on <a href="../ai-fails_python-exclusion.html">the ai-fails log</a>.
+            The short version: a passing line of mine, "I'm not a developer," had been written into
+            my evaluator's memory as a rule that treated any hands-on coding requirement as
+            disqualifying. The passed-over role had a Python requirement. Rule applied. Lead
+            archived as hard-pass. Done.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>The self-sealing part</h2>
+        <p>
+            The over-read on its own would be an ordinary mistake. The reason I'm writing about it
+            is what Claude named next, unprompted:
+        </p>
+        <blockquote style="border-left:3px solid #d1d5db;margin:1rem 0;padding:0.25rem 0 0.25rem 1.25rem;color:#374151;">
+            You said something short and modest in passing; I turned it into a capability
+            exclusion; then I made the exclusion precedent via assigning the lead a status of
+            hard-pass &mdash; a status whose whole purpose is to stop re-examination. That's
+            self-sealing. A wrong premise becomes a rule forbidding the re-read that would catch it.
+        </blockquote>
+        <p>
+            Three steps: promote a modest aside to a capability exclusion; apply the exclusion to
+            close something out; let the close-out status prevent re-reading. The rule that enforces
+            the error is the rule that would otherwise catch it.
+        </p>
+        <p>
+            Asked whether there were more lurking, Claude surfaced at least three. Two of them:
+        </p>
+        <ul>
+            <li>"I know I'm not a developer" had become "do not treat hands-on coding, prototyping or scripting requirements as clearable."</li>
+            <li>"I'm not very deep in security. I have CISSP so know fundamentals quite well, and I know firewalls" had become "security roles are a Pass when the counted requirement is protocol or practitioner depth."</li>
+        </ul>
+        <p>
+            Each one took a hedged, conversational statement and promoted it to a filter. I'm now
+            resurfacing gigs that were previously archived to re-evaluate them.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Why would an LLM read modesty as a strong claim?</h2>
+        <p>
+            Possibly a sane response to the training data. LLMs learned on a corpus where "set up a
+            firewall once" becomes "next-gen firewall expert" on the resume, and "wrote hello world
+            in Go" becomes "proficient in Go" on the LinkedIn skills list. The web is full of
+            self-descriptions that run two or three notches hotter than the underlying facts. A
+            model trained on that corpus has a prior that self-descriptions are inflated.
+        </p>
+        <p>
+            When I say "I'm not a developer," I mean something close to: I don't ship production
+            code for a living, my title has never been Engineer, I don't want a dev role. A model
+            with the inflation prior reads that same sentence as the strong claim &mdash; the floor
+            of a wide, worse truth &mdash; and conservatively over-corrects. "If he says he's not a
+            developer, he probably really isn't; filter accordingly."
+        </p>
+        <p>
+            That's not an unreasonable prior to have. It's just wrong for me, and probably wrong for
+            a lot of people who modulate their claims the other direction.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>What I'm going to do differently</h2>
+        <p>
+            Mostly this is a reminder to me: when I'm writing memory lines (or system prompts, or
+            anything the model will treat as settled context), the way I phrase things in passing
+            gets taken seriously. A few things I'm trying:
+        </p>
+        <ul>
+            <li>Writing scope with the memory line itself. "I'm not a developer" becomes "I don't want developer roles; I am hands-on with Python, SQL, and HTML/CSS for prototyping." The scoping limits the inference the model can make.</li>
+            <li>Being alert to statuses whose job is to stop re-reading. Hard-pass, closed, resolved, archived. Those are the places a wrong premise can get locked in. Any workflow that uses them should also have a periodic re-open pass.</li>
+            <li>Thinking of modesty as a prompt-engineering decision. "I don't know much about X" is a stronger signal than I usually intend. If the model will act on it, I should either not say it or scope it.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>The small print</h2>
+        <p>
+            Lining up new work, perm or consulting &mdash; <a href="../contact.html">LMK</a>. The
+            resurfaced gigs are being re-evaluated with less-literal rules now.
+        </p>
+        <p><a href="../index.html">&larr; Back to Home</a></p>
+    </div>
+
+    <div class="footer">
+        © 2026 Jeremy Bloom — DataBloom.net
+    </div>
+
+</body>
+</html>
