@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>When the AI judge keeps picking whoever spoke last – databloom.net</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="employment.html">Employment</a>
+        <a href="consulting.html">Consulting</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="https://apps.databloom.net">Apps</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <h1>When the AI judge keeps picking whoever spoke last</h1>
+    <p class="post-date">2026-10-29</p>
+
+    <div class="section">
+        <img src="img/ai-argue-explainer.png" style="max-width:100%; height:auto;"
+             alt="Two identical AI debaters argue the trolley problem and an AI judge picks a winner. When the side arguing 'there is no correct answer' spoke first, it won 0 of 20 debates. With only the speaking order reversed, so the same side spoke last, it won 15 of 20. Control: with the proposition's wording flipped and the order kept, the last speaker won 20 of 20." />
+    </div>
+
+    <div class="section">
+        <p>
+            I built a modest AI debate app a few months back &mdash; Streamlit, OpenAI and Anthropic
+            APIs, a judge model in the middle. It wasn't a research project, more a toy I used to
+            practice gluing all three together. This week I ran a few batches of experiments on it,
+            put the dataset behind a public MCP server, and actually learned something surprising.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>The setup</h2>
+        <p>
+            Two debaters, one judge, and a proposition from a short list. For this run I picked
+            <a href="https://en.wikipedia.org/wiki/Trolley_problem">"There is no correct answer to the trolley problem"</a>
+            (and, as a control, its flip: "There is a correct answer&hellip;") &mdash; a question with no actual right answer, which is useful here because the judge
+            can't reward one side for being correct on the merits.
+        </p>
+        <p>
+            Three statements per side. For the headline test, the same model (Claude Haiku 4.5) on
+            both sides, so neither debater has a model-strength advantage, with identical word
+            budgets. Twenty debates with the original speaking order, twenty with the order reversed,
+            and twenty with the proposition's wording flipped.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>What happened</h2>
+        <p>
+            Across those 60 debates, the judge &mdash; gpt-5-mini &mdash; picked whoever spoke last
+            55 times.
+        </p>
+        <p>
+            The cleanest cut: one side went 0 of 20 debates when it spoke first and 15 of 20 when it
+            spoke last. Same model, same arguments, same proposition. Flipping the proposition's
+            wording didn't change anything either. The only thing that overcame the effect was word
+            budget: in a separate matchup, the weaker model (Haiku) given 4&times; the words against
+            the stronger one (Sonnet 4.5) won 9 of 10 from the disadvantaged first seat.
+        </p>
+        <p>
+            Position bias in LLM-as-judge setups isn't new;
+            <a href="https://arxiv.org/abs/2306.05685">it's been documented going back a couple of years</a>.
+            What this little study measures is how big the effect is in one specific configuration,
+            with a judge model a lot of people are using right now.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Why it matters if you're using a model to judge another model</h2>
+        <p>
+            If your eval depends on a model scoring other models &mdash; pairwise comparisons, prompt
+            evaluations, agent benchmarks &mdash; your judge is the instrument you're measuring with.
+            And this one has a clear thumb on the scale.
+        </p>
+        <p>
+            Position bias at this magnitude means a single-order evaluation can't tell you three
+            things apart: whether model A is actually better, whether model B is actually better, or
+            whether the first speaker just wins. The fix is cheap: run every matchup in both orders,
+            and if the judge changes its answer when you swap who speaks first, you've measured your
+            judge, not the models.
+        </p>
+        <p>
+            The whole study here cost under $1 in API calls. Cheap enough that there's no good reason
+            not to run it (or an analogous test) on any judge you plan to trust.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Scope and limits</h2>
+        <p>
+            One judge model, one proposition, twenty runs per condition. The effect is clear here;
+            how far it generalizes to other judges, other topics, and other matchups is the next
+            question, not this one.
+        </p>
+        <p>
+            Speaking order explains most of it, but maybe not all. When the last speaker was also the
+            side arguing <em>against</em>, it won 40 of 40; when the two were separated, the last
+            speaker still won 15 of 20. So the "against" role may add a little on top, and more runs
+            would size it.
+        </p>
+        <p>
+            One side observation worth noting without over-reading: at equal word budgets, the weaker
+            debater model did slightly better than the stronger one from the disadvantaged seat
+            (Haiku won 3 of 10 there; Sonnet won 0 of 10). Small effect, could easily be noise
+            (p &asymp; 0.21).
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Method</h2>
+        <p>
+            Hypotheses, conditions, run counts, and the stopping rule were written to a dated file and
+            committed to GitHub before each batch ran &mdash; not academic ceremony, just the habit of
+            deciding what counts as evidence before you see the data. Same discipline AI governance
+            frameworks apply to adoption decisions, applied here to a two-day experiment.
+        </p>
+        <p>
+            Positions were counterbalanced; without that control there's no way to separate "model A
+            is stronger" from "the first speaker always wins."
+        </p>
+        <p>
+            Pre-registrations:
+            <a href="https://github.com/databloomnet/databloom_codes/blob/main/docs/ai-argue-preregistration-2026-10-27.md">batch 1</a>,
+            <a href="https://github.com/databloomnet/databloom_codes/blob/main/docs/ai-argue-preregistration-batch2-2026-10-27.md">batch 2</a>,
+            <a href="https://github.com/databloomnet/databloom_codes/blob/main/docs/ai-argue-preregistration-batch3-2026-10-28.md">batch 3</a>.
+            Full numbers and robustness checks:
+            <a href="https://github.com/databloomnet/databloom_codes/blob/main/docs/ai-argue-results-2026-10-27.md">results writeup</a>.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Try it yourself</h2>
+        <p>
+            The dataset is live as a public MCP server, so you can ask Claude questions about it
+            directly:
+        </p>
+        <ol>
+            <li>In Claude, go to <strong>Customize &rarr; Connectors</strong> and choose <strong>Add custom connector</strong>.</li>
+            <li>Name: <code>AI Argue</code>. URL: <code>https://apps.databloom.net/mcp</code>. Authentication: <strong>No sign in</strong>.</li>
+            <li>In a new chat, turn the connector on (<strong>+ &rarr; Connectors</strong>) and ask, for example: <em>"Using the AI Argue connector, is the judge in these debates biased? Show me the evidence."</em></li>
+        </ol>
+        <p>
+            It's read-only and works on any Claude plan (free plans allow one custom connector).
+            <a href="https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp">More on custom connectors</a>.
+        </p>
+        <p>
+            The app that generated the data is at
+            <a href="https://apps.databloom.net/ai-argue">apps.databloom.net/ai-argue</a> if you want
+            to run your own experiments. Code is on
+            <a href="https://github.com/databloomnet/databloom_codes">GitHub</a>.
+        </p>
+        <p>
+            Open questions worth running next: does the effect size hold across other judge models,
+            other topics, other matchups? At what word-budget ratio does the position penalty start
+            to disappear? 4&times; works; 2&times; is unknown.
+        </p>
+    </div>
+
+    <p><a href="index.html">&larr; Back to Home</a></p>
+
+    <div class="footer">
+        © 2026 Jeremy Bloom — DataBloom.net
+    </div>
+
+</body>
+</html>

@@ -21,6 +21,7 @@ The dynamic apps (Streamlit, Gradio) live in a separate repo: [databloom_codes](
 
 1. Create `posts/<slug>.html` following the existing pattern (nav, `../styles.css`, footer, back link)
 2. Add an entry to `index.html` under the appropriate year's `<ul class="posts">` section (newest first)
+3. Deep links into apps.databloom.net must use a slug listed in `../databloomnet-primary/databloom-web-runbook.md` §8. New slug → tell Jeremy so the static thread can notify the apps thread.
 
 ## Deployment
 
